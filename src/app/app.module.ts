@@ -15,10 +15,13 @@ import { PlayersComponent } from './components/players/players.component';
 import { DataServiceService} from "./services/data-service.service";
 import { HttpClient} from "@angular/common/http";
 import { HttpClientModule} from "@angular/common/http";
+import { ScoreCardComponent } from './components/score-card/score-card.component';
 
 const appRoutes: Routes = [
   { path: '', component: WelcomePageComponent},
-  { path: 'courses', component:CoursesComponent}
+  { path: 'courses', component:CoursesComponent},
+  { path: 'players', component: PlayersComponent},
+  { path: 'scorecard', component:ScoreCardComponent }
 ]
 
 
@@ -29,7 +32,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     CoursesComponent,
     PlayersComponent,
-    PlayersComponent
+    PlayersComponent,
+    ScoreCardComponent
 
   ],
   imports: [

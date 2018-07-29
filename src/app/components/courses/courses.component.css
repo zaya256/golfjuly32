@@ -4,5 +4,29 @@
 
 .cont{
   margin-top:50px;
+ 
 
+}
+.cont2{
+  margin-left:200px;
+}
+
+#golfsel{
+  margin-top:100px;
+  margin-left:100px;
+  width:100px;
+  height: 40px;
+  display:inline;
+
+}
+#course{
+  margin-left:200px;
+  margin-bottom:30px;
+}
+#theimg{
+  
+}
+
+.disp{
+  display: inline;
 }

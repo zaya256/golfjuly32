@@ -1,3 +1,39 @@
-<p>
-  players works!
-</p>
+
+  <div class="customcontainer">
+  <div class="row">
+      <form class="col s12" (submit)="addPlayer()" >
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Placeholder" name="fname" [(ngModel)]="fname" id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" [(ngModel)]="lname" type="text" name="lname"  class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="username" [(ngModel)]="username" name="lname"  class="validate">
+            <label for="username">username</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" [(ngModel)]="email" name="email"   class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+       <button type="submit" class="btn">Add Player</button>
+      
+      </form>
+      <button class="btn marg" (click)="startGame()">Start Game</button>
+    </div>
+    <div>
+      <ul *ngFor="let player of players">
+        <li>-{{player}}</li>
+      </ul>
+    </div>
+  
+  </div>

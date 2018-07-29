@@ -1,0 +1,53 @@
+
+  
+  <div class="container">
+  
+  <table>
+    <tr>
+      <th>Players</th>
+      <th *ngFor="let hole of holeData" >
+        <div class="format">Hole {{holeData.indexOf(hole)+1}} </div>
+        <div class="format">yards {{hole.yards}}</div>
+        <div class="format">par {{hole.par}}</div>
+        <div class="format">hcp {{hole.hcp}}</div>
+      </th>
+      <th>Total Score</th>
+    </tr>
+    <tr *ngFor="let player of players;let i = index">
+      <td>{{player}}</td>
+      
+      <td *ngFor="let hole of holeData; let x = index">
+          <input [(ngModel)]="dataPoints[i][x]" type="text" placeholder="score"/>
+        </td>
+      <!--
+      <td><input [(ngModel)]="hole2" placeholder="score"></td>
+      <td><input [(ngModel)]="hole3" placeholder="score"></td>
+      <td><input [(ngModel)]="hole4" placeholder="score"></td>
+      <td><input [(ngModel)]="hole5" placeholder="score"></td>
+      <td><input [(ngModel)]="hole6" placeholder="score"></td>
+      <td><input [(ngModel)]="hole7" placeholder="score"></td>
+      <td><input [(ngModel)]="hole8" placeholder="score"></td>
+      <td><input [(ngModel)]="hole9" placeholder="score"></td>
+      <td><input [(ngModel)]="hole10" placeholder="score"></td>
+      <td><input [(ngModel)]="hole11" placeholder="score"></td>
+      <td><input [(ngModel)]="hole12" placeholder="score"></td>
+      <td><input [(ngModel)]="hole13" placeholder="score"></td>
+      <td><input [(ngModel)]="hole14" placeholder="score"></td>
+      <td><input [(ngModel)]="hole15" placeholder="score"></td>
+      <td><input [(ngModel)]="hole16" placeholder="score"></td>
+      <td><input [(ngModel)]="hole17" placeholder="score"></td>
+      <td><input [(ngModel)]="hole18" placeholder="score"></td>
+      -->
+      <td><input [(ngModel)]="totals[i]" placeholder="score"></td>
+  
+      
+    </tr>
+  
+  
+  </table>
+  <button (click)="addScores()">Tabulate Total Scores</button>
+  
+  
+  
+  </div>
+  

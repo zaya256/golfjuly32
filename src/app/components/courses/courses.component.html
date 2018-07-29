@@ -1,67 +1,48 @@
-<div class="cont">
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">Fox Hollow<span class="badge">1</span></a></li>
-    <li><a href="#!">Thanksgiving points<span class="new badge">1</span></a></li>
-    <li><a href="#!">Spanish Oaks</a></li>
-  </ul>
-  <a class="btn dropdown-trigger" data-target="dropdown2">Course<i class="material-icons right">arrow_drop_down</i></a>
-
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one<span class="badge">1</span></a></li>
-    <li><a href="#!">two<span class="new badge">1</span></a></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <a class="btn dropdown-trigger" href="#!" data-target="dropdown2"><i class="material-icons right">arrow_drop_down</i></a>
-
-
-
-</div>
- <!-- <script>$(document).ready(function(){
-                              
-                        $(".dropdown-trigger").dropdown({
-                            hover:true
-                        });
-                        });
-                      </script> -->
-
-
-<div class="cont">
-  <div class="container">
-    <img height="200px" src="https://www.trumpgolf.com/images/dynamic/getImage.gif?ID=100014" aria-placeholder="image here">
-
-    <ul  class=" wide collapsible">
-      <li>
-        <div (click)="test()" class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-        <div class="collapsible-body"><span>
-            <table>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Age</th>
-                    <th>score</th>
-                    <th>score</th>
-                    <th>score</th>
-                  </tr>
-                  <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                    <td>50</td>
-                    <td>50</td>
-                    <td>50</td>
-                  </tr>
-                  <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                    <td>50</td>
-                    <td>50</td>
-                    <td>50</td>
-                  </tr>
-                </table>
-          </span></div>
-      </li>
-    </ul>
-  </div>
-
-</div>
+<!--
+<select id="golfsel">
+<option (click)="onCourseClick()" value='1'>{{courseInfo[0].name}}</option>
+    <option (click)="onCourse2Click()" value='1'>{{courseInfo[1].name}}</option>
+    <option (click)="onCourse3Click()" value='1'>{{courseInfo[2].name}}</option>
+  </select>-->
+  <div id="course">
+      <h2>Courses</h2>
+     
+     <button class="waves-effect waves-light btn" (click)="onCourseClick()">{{courseInfo[0].name}}</button>
+     <button class="waves-effect waves-light btn" (click)="onCourse2Click()">{{courseInfo[1].name}}</button>
+    
+     <button class="waves-effect waves-light btn" (click)="onCourse3Click()">{{courseInfo[2].name}}</button>
+    </div>
+    <div id="course">
+        <button *ngFor="let type of difficulty" class="waves-effect waves-light btn disp" (click)="setDifficulty(type)">{{type}}</button>
+            
+    </div>
+    
+    
+    
+                          
+    <div class="cont">
+      <div class="container">
+        <img id="theimg" height="400px" src="{{image}}" aria-placeholder="image here">
+    
+        <ul  class=" wide collapsible">
+          <li>
+            <div (click)="test()" class="collapsible-header"><i class="material-icons">filter_drama</i>Course ID: {{id}}</div>
+            <div class="collapsible-body"><span>
+               
+              </span></div>
+          </li>
+        </ul>
+      </div>
+    
+      <div *ngIf="name">
+        <div *ngIf="chosenDifficulty">
+      <button (click)="playThisCourse()" class="cont2 btn" >Click to Play {{name}} on {{chosenDifficulty}}</button>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    <div>
+    </div>
+    
